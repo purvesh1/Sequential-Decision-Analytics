@@ -1,4 +1,4 @@
-# What are we (or Optimal Dynamics) trying to do
+# Universal Framework for SDA by Warren Powell
 **Refresh on the Old Way**: "Classical optimization" taken as a surrogate. This is how people have [traditionally](https://youtu.be/hOmfamEOyko?si=xReyKOd2fCM-UMhR&t=1786) tried to solve complex problems. (LPP - snapshots in time.)
 
 **Expose Its Biggest Flaw**: Real-world problems aren't static snapshots. They are sequential. You make a decision, new information comes in (e.g., a shipment is delayed, a customer changes an order), and you have to decide again. The "optimal" answer from 5 minutes ago might now be terrible.
@@ -126,3 +126,4 @@ Finding the best policy means evaluating policies to determine which is best. Mo
 # References
 1. https://castle.princeton.edu/wp-content/uploads/2022/11/Powell-SDAM-Nov242022_final_w_frontcover.pdf
 2. https://youtu.be/hOmfamEOyko?si=gqmE-ZyX6-nvWrdE&t=2107
+3. https://castle.princeton.edu/Papers/Powell%20CRC%20chapter%20-%20TL%20dispatching%20Sept%2028%202007.pdf
