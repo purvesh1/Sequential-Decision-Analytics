@@ -37,7 +37,7 @@ D<sub>i</sub>: i<sup>th</sup>  peice of new information*
   * **Formula:** $$X^{\pi}(S_t|\theta) = \arg\min_{x \in X_t(\theta)} c^T(\theta)x_t + g(x_t, \theta), \quad \pi = (f \in F | \theta \in \Theta^f)$$
   * **You choose:**
       * The **type of model** (`f`).
-      * The **tuning knobs** (`&theta;`).
+      * The **tuning knobs** (`θ;`).
 
 #### 2\. The Objective Function (The Scorecard)
 
@@ -84,6 +84,18 @@ The matrix below explains the different *types* of rulebooks you can create.
 | **3. VFA** ([Value Function Approx.](https://youtu.be/hOmfamEOyko?si=gqmE-ZyX6-nvWrdE&t=2107)) | Choosing the action that leads to the most "valuable" future situation. | For each possible decision, it uses a function to estimate the long-term value of the state you would land in, then picks the decision leading to the best future state. | **Chess Grandmaster:** They don't just think about the piece they can capture now; they make the move that leads to a superior board position (a state with high "value"). | **Yes, implicitly.** The "value" of a future state is an approximation of the expected outcome of all random possibilities that could unfold from there. |
 | **4a. Det-DLA** (Deterministic Lookahead) | Planning for the future by assuming the most likely outcome will happen. | It creates a single, deterministic forecast of the future and finds the best sequence of actions for that *one* specific future. | **Google Maps' First Suggestion:** It calculates the "fastest route" based on average traffic data, assuming no unexpected accidents will occur. | **Ignores it.** It explicitly assumes the future is certain and follows a single predicted path. |
 | **4b. Stoch-DLA** (Stochastic Lookahead) | Planning for the future while actively considering multiple random possibilities. | It models the future as a tree of different possible scenarios and finds a decision that is robustly good across many of those potential outcomes. | **Retirement Planning:** Instead of assuming a fixed 7% return every year, a financial planner runs simulations with market crashes and booms to find a strategy that works well in many scenarios. | **Explicitly.** This is its entire purpose. It directly models and plans for future randomness to make a robust decision now. |
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+*E.g. 1. Airline do it for planning flights taking a flexible 15 min buffer(std dev).*
+![alt text](image-7.png)
+*E.g. The below function is designed by Powell. Depends on formulating V correctly and works for very specific problems*
+![alt text](image-8.png)
+*E.g. People taking a traffic buffer (in a heuristic way) using G-Maps in addition a determistic buffer used by google to formulate futurre delay*
+
 
 # A six-step modeling process
 
